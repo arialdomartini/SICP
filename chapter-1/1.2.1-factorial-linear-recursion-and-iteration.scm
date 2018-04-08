@@ -12,7 +12,7 @@
   (factorial-iter n 1))
 
 (display (iterative-factorial 6))
-(newline)
+(newline
 
 (define (iterative-factorial2 n)
   (define (factorial-iter counter product)

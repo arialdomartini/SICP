@@ -24,7 +24,7 @@
 (define (f2 n)
   (define (shift-window i left right)
     (cond ((< n 3) n)
-          ((= i n) left)
+          ((= i n) lef)
           (else (shift-window (+ i 1) right (* 2 right)))))
   (shift-window 0 0 1))
 

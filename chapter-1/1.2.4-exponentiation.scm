@@ -20,3 +20,19 @@
 
 (display (expt-linear 2 8))
 (newline)
+
+
+;; b^n = b^(n/2)^2       if n is even
+;; b * b^(n - 1)         if n is odd
+
+(define (fast-expt b n)
+  (define (square x)
+    (* x x))
+  (define (even? x)
+    (= (remainder n 2) 0))
+  (cond ((= n 0) 1)
+        ((even? n) (square (fast-expt b (/ n 2))))
+        (else (* b (fast-expt b (- n 1))))))
+
+(display (fast-expt 2 8))
+(newline)

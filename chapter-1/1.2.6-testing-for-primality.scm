@@ -38,4 +38,5 @@
 (newline)
 (newline)
 
+(display (smallest-divisor 19999))
 

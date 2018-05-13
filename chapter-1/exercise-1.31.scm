@@ -12,8 +12,7 @@
         (range-iter (+ 1 from)
                     to
                     (cons from result))))
-  (range-iter from to ())
-  )
+  (range-iter from to ()))
 
 (define (product-rec f xs)
   (if (null? xs)
@@ -28,18 +27,17 @@
         (product-iter f
                       (cdr xs)
                       (* result
-                         (f (car xs)))))
-    )
-
-
+                         (f (car xs))))))
   (product-iter f xs 1))
 
-(display (product-rec (lambda (x) (* x x))
-                  (range-rec 1 10)))
+(display (product-rec
+          (lambda (x) (* x x))
+          (range-rec 1 10)))
 (newline)
 
-(display (product (lambda (x) (* x x))
-                  (range 1 10)))
+(display (product
+          (lambda (x) (* x x))
+          (range 1 10)))
 (newline)
 
 
@@ -70,7 +68,7 @@
      (product item-div
               (range 0 n))))
 
-(display (+ 0.0 (pi 3500)))
+(display (+ 0.0 (pi 13500)))
 (newline)
 
 
